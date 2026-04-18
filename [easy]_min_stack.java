@@ -20,8 +20,9 @@ class MinStack {
     }
     
     public void pop() {
-        if(minStack.peek()==mainStack.peek())  // while deleting elements make sure if it present in min stack
+        if(minStack.peek().equals(mainStack.peek()))  // while deleting elements make sure if it present in min stack
             minStack.pop();  // delete from it also to have a sync between them
+                             // if you use == it works for only -127 to 127 after that if returns false and it works primitives 
         
         mainStack.pop();
     }
