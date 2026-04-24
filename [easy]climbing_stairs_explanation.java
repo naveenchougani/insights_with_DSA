@@ -38,13 +38,13 @@ class Solution {
         if(n<=2)
         return n;
 
-       int waysFromLastStep=2, waysFromLastSecondStep=1, totalWays=0;  // From stair 2 => 2 ways, from stair 1 => 1 way
+       int waysFrom1stLastStep=2, waysFrom2ndLastStep=1, totalWays=0;  // From stair 2 => 2 ways, from stair 1 => 1 way
       
        for(int i=3;i<=n;i++)          // we will start from counting for the stair 3. And we will swap last step and last second step
        {
-        totalWays= waysFromLastSecondStep+waysFromLastStep;
-        waysFromLastSecondStep=waysFromLastStep;
-        waysFromLastStep = totalWays;
+        totalWays= waysFrom2ndLastStep+waysFrom1stLastStep;
+        waysFrom2ndLastStep=waysFrom1stLastStep;
+        waysFrom1stLastStep = totalWays;
        }
 
        return totalWays;
