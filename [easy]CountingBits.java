@@ -1,6 +1,8 @@
 // if n is given.. return an array from 0th index... to nth index..
 // where each index represents the number and holds the no.of 1 bits in that number.
 
+// The main logic is like, number of 1 bits in the ith number and half of ith number are same
+
 // This simple solution would do the work
 arr[i] = arr[i >> 1] + (i & 1);
 
